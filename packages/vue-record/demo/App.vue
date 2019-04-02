@@ -1,6 +1,7 @@
 <!--渲染模版-->
 <template>
   <div>
+    <voice></voice>
     <record
       :minTime="2000"
       @startRecord="startRecord"

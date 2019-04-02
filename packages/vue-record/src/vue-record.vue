@@ -5,17 +5,17 @@
         @touchstart.prevent="startRecord"
         @touchend.prevent="stopRecord">
         <div class="svg-voice">
-          <voice></voice>
+          <VoiceIcon></VoiceIcon>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Voice from "./voice.vue";
+import VoiceIcon from "./voice-icon.vue";
 export default {
   components: {
-    Voice
+    VoiceIcon
   },
   props: ['minTime'],
   data() {
