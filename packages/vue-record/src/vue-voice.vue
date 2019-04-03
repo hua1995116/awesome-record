@@ -11,46 +11,46 @@
 </template>
 <script>
 export default {
-  props: ['time'],
+  props: ["time"],
   data() {
     return {
-      status: '',
-    }
+      status: ""
+    };
   },
   mounted() {
     setTimeout(() => {
-      this.status = '';
+      this.status = "";
     }, this.time * 1000);
   },
   computed: {
     initTime() {
       const initTime = +this.time || 5;
-      const resultTime = '';
-      if(initTime > 60) {
-        return (initTime / 60) + '\"' + (initTime % 60) + '\'';
+      const resultTime = "";
+      if (initTime > 60) {
+        return initTime / 60 + '"' + (initTime % 60) + "'";
       }
-      return initTime + '\'';
+      return initTime + "'";
     }
   },
   methods: {
     handleStatus() {
-      if(!this.status) {
-        this.status = 'playing'
+      if (!this.status) {
+        this.status = "playing";
       } else {
-        this.status = '';
+        this.status = "";
       }
     }
   }
-}
+};
 </script>
 <style>
 .simple-audio {
-  display:block;
+  display: block;
 }
 .simple-audio:after {
-  content:'';
-  clear:both;
-  display:block;
+  content: "";
+  clear: both;
+  display: block;
 }
 .audio-container {
   float: left;
@@ -70,7 +70,7 @@ export default {
 }
 
 .audio-container:before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 8px;
@@ -109,13 +109,13 @@ export default {
 }
 
 .audio-status.error:after {
-  content:'!';
-  font-size:12px;
-  color:#aaa;
-  margin-left:16px;
-  vertical-align:top;
+  content: "!";
+  font-size: 12px;
+  color: #aaa;
+  margin-left: 16px;
+  vertical-align: top;
 }
-@-webkit-keyframes audio_playing {
+@keyframes audio_playing {
   0% {
     background-position: 0 -15px;
   }

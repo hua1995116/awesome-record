@@ -1,7 +1,7 @@
 import vueRecord from './vue-record.vue'
 import vueVoice from './vue-voice.vue'
 
-function install (Vue) {
+function install(Vue) {
   if (install.installed) return
   install.installed = true
   Vue.component('record', vueRecord)

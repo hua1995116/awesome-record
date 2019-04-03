@@ -17,30 +17,29 @@ export default {
   components: {
     VoiceIcon
   },
-  props: ['minTime'],
+  props: ["minTime"],
   data() {
     return {
       isRecord: false,
       beginTime: 0,
       endTime: 0,
       time: this.minTime || 1000
-    }
+    };
   },
   methods: {
     startRecord() {
       this.isRecord = true;
       this.beginTime = Date.now();
-      this.$emit('startRecord');
+      this.$emit("startRecord");
     },
     stopRecord() {
       this.endTime = Date.now();
       if (this.endTime - this.beginTime < this.time) {
-        this.$emit('lowRecord');
+        this.$emit("lowRecord");
       } else {
-        this.$emit('stopRecord');
+        this.$emit("stopRecord");
       }
       this.isRecord = false;
-
     }
   }
 };
