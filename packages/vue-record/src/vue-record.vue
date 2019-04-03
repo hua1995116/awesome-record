@@ -89,10 +89,10 @@ export default {
 }
 
 .begin-shrink {
-  -webkit-animation-name: circle_shrink;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
+  animation-name: circle_shrink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   background-color: #cfecd0;
 }
 @keyframes circle_shrink {
